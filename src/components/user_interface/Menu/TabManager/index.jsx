@@ -13,7 +13,7 @@ const TabManager = ({ children, tabs}) => {
                                         onClickTab={onClickTab} />)) }
             </div>
             <div className='tab-content'>
-                <TabContent className='tab-content' />
+                <TabContent />
             </div>
         </div>
     );
