@@ -1,0 +1,25 @@
+$tab-background-color: #EEEEEE;
+$tab-border-color: #ccc;
+
+.tab-manager-container {
+    .tab-group {
+        display: flex;
+
+        .tab {
+            display: flex;
+            justify-content: space-around;
+            width: 120px;
+            margin: 15px 0 0 0;
+            padding: 15px;
+            border: solid $tab-border-color;
+            border-width: 0 0 1px 0;
+            cursor: default;
+        }
+
+        .active {
+            border: solid tab-border-color;
+            border-width: 1px 1px 0 1px;
+            background-color: $tab-background-color;
+        }
+    }
+}

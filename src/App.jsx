@@ -1,27 +1,24 @@
 import React, { useState } from 'react'
-import { Button, InputField } from './components/user_interface'
+import { TabManager } from './components/user_interface'
 
+const TABS = [{ id: 1, title: 'Home' }, 
+              { id: 2, title: 'Scheduled' }, 
+              { id: 3, title: 'Pending' }, 
+              { id: 4, title: 'Deleted' }]
 function App() {
-  const [value, setValue] = useState('');
   return (
-    <div>
-      <InputField label="Name"
-                  value={value}
-                  error={{message: "WoOoOps an unexpected error has ocurred"}}
-                  onChange={e => setValue(e.target.value)} />
-      <InputField label="Please provide your address"
-                  value={value}
-                  onChange={e => setValue(e.target.value)} />
-      <div style={{ display: 'flex', 
-                    justifyContent: 'space-between', 
-                    width: '500px',
-                    margin: '20px'}}>
-        <Button primary>Primary</Button>
-        <Button warning>Warning</Button>
-        <Button danger>Danger</Button>
-      </div>
-    </div>
+      <TabManager tabs={TABS}>
+        <Home />
+        <Scheduled />
+        <Pending />
+        <Deleted />
+      </TabManager>
   )
 }
+
+const Home = () => <h2>Home</h2>;
+const Scheduled = () => <h2>Scheduled</h2>;
+const Pending = () => <h2>Pending</h2>;
+const Deleted = () => <h2>Deleted</h2>;
 
 export default App
