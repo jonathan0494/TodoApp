@@ -2,6 +2,10 @@ $tab-background-color: #EEEEEE;
 $tab-border-color: #ccc;
 
 .tab-manager-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid gray;
+    padding: 30px;
     .tab-group {
         display: flex;
 
@@ -12,7 +16,7 @@ $tab-border-color: #ccc;
             margin: 15px 0 0 0;
             padding: 15px;
             border: solid $tab-border-color;
-            border-width: 0 0 1px 0;
+            border-width: 0;
             cursor: default;
         }
 
@@ -21,5 +25,10 @@ $tab-border-color: #ccc;
             border-width: 1px 1px 0 1px;
             background-color: $tab-background-color;
         }
+    }
+
+    .tab-content {
+        background-color: $tab-background-color;
+        padding: 10px;
     }
 }
