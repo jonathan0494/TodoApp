@@ -12,6 +12,7 @@ const TabManager = ({ children, tabs}) => {
                                         activeTab={activeTab}
                                         onClickTab={onClickTab} />)) }
             </div>
+            <TabContent />
         </div>
     );
 };
