@@ -1,0 +1,14 @@
+.input-field-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr;
+    column-gap: 10px;
+    align-items: center;
+    width: 600px;
+    > span {
+        color: red;
+    }
+
+    .error, .error:focus {
+        border: 1px solid red;
+    }
+}
