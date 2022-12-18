@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { TabManager } from './components/user_interface'
 
-const TABS = [{ id: 1, title: 'Home' }, 
-              { id: 2, title: 'Scheduled' }, 
-              { id: 3, title: 'Pending' }, 
-              { id: 4, title: 'Deleted' }]
+const TABS = [{ id: 0, title: 'Home' }, 
+              { id: 1, title: 'Scheduled' }, 
+              { id: 2, title: 'Pending' }, 
+              { id: 3, title: 'Deleted' }]
 function App() {
   return (
       <TabManager tabs={TABS}>
