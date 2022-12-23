@@ -21,8 +21,6 @@ $tab-border-color: #ccc;
         }
 
         .active {
-            border: solid tab-border-color;
-            border-width: 1px 1px 0 1px;
             background-color: $tab-background-color;
         }
     }

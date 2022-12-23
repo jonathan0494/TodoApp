@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Home from './components/Home';
 import { TabManager } from './components/user_interface'
 
 const TABS = [{ id: 0, title: 'Home' }, 
@@ -16,7 +17,6 @@ function App() {
   )
 }
 
-const Home = () => <h2>Home</h2>;
 const Scheduled = () => <h2>Scheduled</h2>;
 const Pending = () => <h2>Pending</h2>;
 const Deleted = () => <h2>Deleted</h2>;

@@ -1,6 +1,6 @@
 .input-field-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-columns: 2fr 1fr auto;
     column-gap: 10px;
     align-items: center;
     width: 600px;

@@ -1,0 +1,13 @@
+
+
+.home-wrapper {
+    background-color: ghostwhite;
+    padding: 20px;
+    display: flex;
+
+    > Button { height: 40px; }
+    .input-field-wrapper {
+        Input { width: 400px; padding: 10px; }
+        label { width: 100px; }
+    }
+}
