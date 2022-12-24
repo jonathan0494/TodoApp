@@ -1,11 +1,19 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
+import { actions, initialState, taskReducer } from '../../store';
 
 export const TaskContext = React.createContext([]);
 
 const TaskProvider = ({ children }) => {
-    const [taskList, setTaskList] = useState([]);
+    const [state, dispatch] = useReducer(taskReducer, initialState);
+    const value = {
+        taskList: state.taskList,
+        addTask: (taskID, taskName) => {
+            dispatch({ type: actions.ADD_TASK, id: taskID, name: taskName });
+        }
+    };
+
     return (
-        <TaskContext.Provider value={[taskList, setTaskList]}>
+        <TaskContext.Provider value={value}>
             { children }
         </TaskContext.Provider>
 
