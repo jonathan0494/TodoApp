@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Home from './components/Home';
 import { TabManager } from './components/user_interface'
+import TaskProvider from './contexts/TaskProvider';
 
 const TABS = [{ id: 0, title: 'Home' }, 
               { id: 1, title: 'Scheduled' }, 
@@ -8,12 +9,14 @@ const TABS = [{ id: 0, title: 'Home' },
               { id: 3, title: 'Deleted' }]
 function App() {
   return (
+    <TaskProvider>
       <TabManager tabs={TABS}>
-        <Home />
-        <Scheduled />
-        <Pending />
-        <Deleted />
+          <Home />
+          <Scheduled />
+          <Pending />
+          <Deleted />
       </TabManager>
+      </TaskProvider>
   )
 }
 
