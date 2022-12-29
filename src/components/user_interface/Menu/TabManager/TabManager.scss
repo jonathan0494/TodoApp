@@ -1,4 +1,4 @@
-$tab-background-color: #EEEEEE;
+$tab-background-color: white;
 $tab-border-color: #ccc;
 
 .tab-manager-container {
@@ -6,6 +6,7 @@ $tab-border-color: #ccc;
     grid-template-columns: 1fr;
     border: 1px solid gray;
     padding: 30px;
+    background-color: rgb(247 248 250);
 
     .tab-group {
         display: flex;

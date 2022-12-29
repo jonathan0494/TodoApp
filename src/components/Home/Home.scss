@@ -1,10 +1,10 @@
 
 
 .home-wrapper {
-    background-color: ghostwhite;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: 20px 0;
 
     .input-field-wrapper {
         
@@ -12,7 +12,38 @@
         label { width: 100px; }
     }
     > Button { height: 40px; }
-    > ul {
+    .cards {
         grid-row: 2;
+        grid-column: 1 / 12;
+        display: flex;
+        flex-wrap: wrap;
+        .card {
+
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            background: #1877F2;
+            color: white;
+            box-shadow: 10px 9px 0px 0px rgba(0,0,0,0.13);
+            -webkit-box-shadow: 10px 9px 0px 0px rgba(0,0,0,0.13);
+            -moz-box-shadow: 10px 9px 0px 0px rgba(0,0,0,0.13);
+            
+            > p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+
+            }
+            .options {
+                > span {
+                    margin: 5px;
+                    cursor: pointer;
+                }
+                align-self: flex-end;
+            }
+        }
     }
 }
