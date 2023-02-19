@@ -9,6 +9,9 @@ const TaskProvider = ({ children }) => {
         taskList: state.taskList,
         addTask: (taskID, taskName) => {
             dispatch({ type: actions.ADD_TASK, id: taskID, name: taskName });
+        },
+        deleteTask: (taskID) => {
+            dispatch({ type: actions.DELETE_TASK, id: taskID});
         }
     };
 
